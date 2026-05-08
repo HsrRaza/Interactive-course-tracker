@@ -5,12 +5,15 @@ import {
 } from "react-icons/fi"
 
 import Lessons from "./Lessons"
+import type { ModuleType } from "../types/types"
 
-const ModuleCard = ({
-  module,
-  completed,
-  toggleLesson
-}) => {
+type Props = {
+  module : ModuleType
+  completed:string[]
+  toggleLesson :(id :string)=>void
+}
+
+const ModuleCard = ({ module,completed,toggleLesson }: Props) => {
 
   const [open, setOpen] = useState(true)
 

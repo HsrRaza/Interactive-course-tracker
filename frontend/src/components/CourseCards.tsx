@@ -8,8 +8,13 @@ import {
 } from "react-icons/si"
 
 import { Link } from "react-router-dom"
+import type { CourseType } from "../types/types"
 
-const CourseCard = ({ course }) => {
+type Props = {
+    course:CourseType
+}
+
+const CourseCard = ({ course } : Props) => {
 
     const icons = {
         react: <FaReact />,

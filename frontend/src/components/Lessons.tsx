@@ -1,12 +1,15 @@
 import {
   FiCheck
 } from "react-icons/fi"
+import type { LessonType } from "../types/types"
 
-const Lessons = ({
-  lesson,
-  completed,
-  toggleLesson
-}) => {
+type Props = {
+  lesson :LessonType
+  completed: boolean
+  toggleLesson :(id:string) =>void
+}
+
+const Lessons = ({ lesson,completed, toggleLesson } :Props) => {
 
   return (
     <label
