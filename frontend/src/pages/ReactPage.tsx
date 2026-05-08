@@ -6,7 +6,7 @@ import ModuleCard from "../components/ModuleCard"
 
 const ReactPage = () => {
 
-  const [completed, setCompleted] = useState(() => {
+  const [completed, setCompleted] = useState<string[]>(() => {
     const saved = localStorage.getItem("completed")
     return saved ? JSON.parse(saved) : []
   })
@@ -17,7 +17,7 @@ const ReactPage = () => {
   const progress =
     (complete / totalLessons) * 100
 
-  function toggleLessons(id) {
+  function toggleLessons(id :string) {
 
     if (completed.includes(id)) {
 

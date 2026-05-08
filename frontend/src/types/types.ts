@@ -15,7 +15,7 @@ export type CourseType = {
   description: string
   tags: string[]
   lessons: number
-  icon: string
+  icon:"react" | "javascript" |"node"
   path: string
   modules?: ModuleType[]
 }
