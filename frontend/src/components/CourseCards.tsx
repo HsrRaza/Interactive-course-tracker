@@ -24,24 +24,7 @@ const CourseCard = ({ course } : Props) => {
 
     return (
         <div
-            className="
-        h-full
-        min-h-80
-        rounded-3xl
-        border
-        border-neutral-800
-        bg-neutral-950
-        p-6
-        flex
-        flex-col
-        justify-between
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:border-neutral-700
-        hover:shadow-2xl
-        hover:shadow-purple-500/10
-      "
+            className=" h-full min-h-80 rounded-3xl border border-neutral-800 bg-neutral-950 p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-neutral-700 hover:shadow-2xl hover:shadow-purple-500/10 "
         >
 
             {/* TOP */}
@@ -62,20 +45,7 @@ const CourseCard = ({ course } : Props) => {
                     </div>
 
                     <div
-                        className="
-              h-14
-              w-14
-              min-w-14
-              rounded-2xl
-              bg-linear-to-br
-              from-purple-500
-              to-cyan-500
-              flex
-              items-center
-              justify-center
-              text-2xl
-              shadow-lg
-            "
+                        className=" h-14 w-14 min-w-14 rounded-2xl bg-linear-to-br from-purple-500  to-cyan-500 flex items-center justify-center text-2xl shadow-lg "
                     >
                         {icons[course.icon]}
                     </div>
@@ -88,16 +58,7 @@ const CourseCard = ({ course } : Props) => {
                     {course.tags.map((tag, index) => (
                         <span
                             key={index}
-                            className="
-                px-3
-                py-1
-                rounded-full
-                bg-neutral-900
-                border
-                border-neutral-700
-                text-sm
-                text-neutral-300
-              "
+                            className=" px-3 py-1 rounded-full bg-neutral-900 border border-neutral-700 text-sm text-neutral-300  "
                         >
                             {tag}
                         </span>

@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 
-import { allLessons, course } from "../lib/react"
+// import { allLessons, course } from "../lib/react"
+import {javascriptCourse , allJavascriptLessons } from "../lib/javascript"
 import ModuleCard from "../components/ModuleCard"
 
-const ReactPage = () => {
+const JavaScriptPage = () => {
 
-  const STORAGE_KEY = "react-progress"
+    const STORAGE_KEY = "javascript-progress"
 
   const [completed, setCompleted] = useState<string[]>(() => {
     const saved = localStorage.getItem(STORAGE_KEY)
     return saved ? JSON.parse(saved) : []
   })
 
-  const totalLessons = allLessons.length
+  const totalLessons = allJavascriptLessons.length
   const complete = completed.length
 
   const progress =
@@ -33,7 +34,6 @@ const ReactPage = () => {
 
     }
   }
-  
 
   useEffect(() => {
     localStorage.setItem(
@@ -74,11 +74,11 @@ const ReactPage = () => {
           </p>
 
           <h1 className="text-5xl font-bold mb-4">
-            React.js Mastery
+            JavaScript  Mastery
           </h1>
 
           <p className="text-neutral-400 text-lg leading-relaxed">
-            Master React, Hooks, component architecture, and scalable frontend systems.
+            Master Function, classes, Asychronous, and scalable frontend systems.
           </p>
 
           {/* PROGRESS */}
@@ -128,7 +128,7 @@ const ReactPage = () => {
         {/* MODULES */}
         <div className="space-y-5">
 
-          {course.modules.map((module, index) => (
+          {javascriptCourse.modules.map((module, index) => (
 
             <motion.div
               key={module.id}
@@ -166,4 +166,4 @@ const ReactPage = () => {
   )
 }
 
-export default ReactPage
+export default JavaScriptPage
