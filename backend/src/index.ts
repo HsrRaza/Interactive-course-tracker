@@ -7,6 +7,11 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+import courseRoutes from "./routes/course.routes.js";
+
+app.use("/api", courseRoutes);
 
 app.get("/", async (req:Request, res:Response) => {
   const result = await pool.query("SELECT NOW()");
