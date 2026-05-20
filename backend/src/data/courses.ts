@@ -2,6 +2,7 @@ export const courses = [
   {
     id: "javascript",
     title: "Advanced JavaScript",
+    slug:"javascript",
     subtitle: "Master the language behind the web",
     description: "Deep dive into JavaScript internals and modern patterns",
     tags: ["Closures", "Async", "DOM", "V8"],
@@ -128,6 +129,7 @@ export const courses = [
   },
   {
     id: "nodejs",
+    slug:"node",
     title: "Node.js Backend Engineering",
     subtitle: "Build scalable APIs and production backend systems",
     description: "Learn backend development using Node.js, Express, databases, and authentication.",

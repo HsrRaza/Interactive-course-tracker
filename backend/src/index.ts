@@ -2,9 +2,15 @@ import express from "express";
 import {pool} from "./config/db.js";
 import dotenv from "dotenv";
 import  type { Response , Request } from "express";
-dotenv.config();
 
+import cors from "cors";
+dotenv.config();
 const app = express();
+
+
+app.use(cors())
+
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
